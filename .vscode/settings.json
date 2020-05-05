@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/4d230aa0-ed51-4c0c-972d-d5b5fae3917b/resourceGroups/MERNStack/providers/Microsoft.Web/sites/mernstack",
+    "appService.deploySubpath": ""
+}
