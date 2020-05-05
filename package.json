@@ -1,6 +1,6 @@
 {
   "name": "mernstack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Learning MERN stack from Traversy",
   "main": "src/server.ts",
   "scripts": {
@@ -14,8 +14,7 @@
   "dependencies": {
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.12",
-    "tsc": "^1.20150623.0"
+    "mongoose": "^5.9.12"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
