@@ -1,5 +1,5 @@
-node_modules
-.idea
-lib
-src/keys.ts
+/node_modules
+/.idea
+/lib
+/src/keys.ts
 
