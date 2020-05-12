@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import { Col, Container, Fade, ListGroup, Row } from "react-bootstrap";
+import { Button, Col, Container, Fade, ListGroup, Row } from "react-bootstrap";
 import { nanoid } from "nanoid";
 interface stateschema {
-  items: Array<any>;
+  items: Array<itemschema>;
+}
+interface itemschema {
+  name: string;
+  id: string;
 }
 class ShoppingList extends Component<any, any> {
   state: stateschema = {
@@ -23,18 +27,21 @@ class ShoppingList extends Component<any, any> {
               {this.state.items.map((elem) => {
                 return (
                   <Fade appear={true} in={true}>
-                    <ListGroup.Item
-                      key={elem.id}
-                      action
-                      onClick={() => {
-                        this.setState({
-                          items: this.state.items.filter(
-                            (item) => item.id !== elem.id
-                          ),
-                        });
-                      }}
-                    >
+                    <ListGroup.Item key={elem.id}>
                       {elem.name}
+                      <Button
+                        className="float-right"
+                        variant="primary"
+                        onClick={() => {
+                          this.setState({
+                            items: this.state.items.filter(
+                              ({ id, name }) => id !== elem.id
+                            ),
+                          });
+                        }}
+                      >
+                        Done
+                      </Button>
                     </ListGroup.Item>
                   </Fade>
                 );
